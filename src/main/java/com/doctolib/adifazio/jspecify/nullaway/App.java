@@ -1,7 +1,11 @@
 package com.doctolib.adifazio.jspecify.nullaway;
 
+import com.doctolib.adifazio.jspecify.nullaway.impl.DefaultTokenExtractor;
+
 public class App {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        var extractor = new DefaultTokenExtractor();
+        var token = extractor.extractToken("example input");
+        System.out.printf("Extracted token: %s with length %d%n", token, token.length());
     }
 }
