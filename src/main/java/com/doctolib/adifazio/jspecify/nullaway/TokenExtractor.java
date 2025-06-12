@@ -1,5 +1,8 @@
 package com.doctolib.adifazio.jspecify.nullaway;
 
+import org.jspecify.annotations.NonNull;
+import org.jspecify.annotations.Nullable;
+
 public interface TokenExtractor {
 
     /**
@@ -7,5 +10,5 @@ public interface TokenExtractor {
      * @param input the input string
      * @return the extracted token
      */
-    String extractToken(String input);
+    @Nullable String extractToken(@NonNull String input);
 }
